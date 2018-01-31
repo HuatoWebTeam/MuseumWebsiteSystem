@@ -1,0 +1,93 @@
+
+@import '../style/index.less';
+
+
+@keyframes animatedBackground {
+    form { background-position:  center 700px; }
+    to { background-position: center center; }
+}
+.plan-container {
+    .titleImg {
+        height: 460px;
+        background: url('../../assets/img/plan/solution.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .plan-main {
+        width: @mainContentWidth;
+        margin: 0 auto;
+        .content {
+            // height: 740px;
+            .textContent {
+                // height: 100%;
+                position: relative;
+                .imgContent { 
+                    // width: 100%; 
+                    // height: 300px; 
+                    // position: absolute; 
+                    // top: 0; 
+                    // right: 0; 
+                    // bottom: 0; 
+                    // left: 0; 
+                    // margin: auto; 
+                    
+                }
+                
+                .text {
+                    // padding: 10px 20px;
+                    .title {
+                        font-size: 20px;
+                        text-align: left; 
+                        color: #333;
+                        font-weight: 600;
+                        height: 50px;
+                        line-height: 50px;
+                        padding-bottom: 20px;
+                        opacity: 0;
+                        transition: all .8s .4s;
+                        -webkit-transition: all .8s .4s;
+                        -moz-transition: all .8s .4s;
+                        -ms-transition: all .8s .4s;
+                        -o-transition: all .8s .4s;
+                    }
+                    p {
+                        font-size: 16px;
+                        text-indent: 32px;
+                        text-align: left;
+                        line-height: 35px;
+                        opacity: 0;
+                        transition: all .8s .4s;
+                        -webkit-transition: all .8s .6s;
+                        -moz-transition: all .8s .6s;
+                        -ms-transition: all .8s .6s;
+                        -o-transition: all .8s .6s;
+                    }
+                    .showText {
+                        opacity: 1;
+                        transform: translate(0, -30px);
+                        // transition: translate(0, -30px);
+                        -webkit-transform: translate(0, -30px);
+                        -ms-transform: translate(0, -30px);
+                        -moz-transform: translate(0, -30px);
+                        -o-transform: translate(0, -30px);
+                    }
+                    .showAnimation {
+                        animation: animatedBackground 0.8s forwards;
+                        -webkit-animation: animatedBackground 0.8s forwards;
+                        -moz-animation: animatedBackground 0.8s forwards;
+                        -ms-zoom-animation: animatedBackground 0.8s forwards;
+                        -o-animation: animatedBackground 0.8s forwards;
+                    }
+                }
+            }
+        }
+        .imgRight {
+            background: #fff;
+            
+        }
+        .imgLeft {
+            background: #f1f1f1;
+        }
+        
+    }
+}

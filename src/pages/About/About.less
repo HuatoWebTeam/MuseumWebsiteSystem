@@ -1,0 +1,71 @@
+@import '../style/index.less';
+
+.aboutContainer {
+    .aboutTitleImg {
+        background: url('../../assets/img/about/about.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .aboutContainer {
+        width: @mainContentWidth;
+        margin: 0 auto;
+        padding: 30px 0;
+        overflow: hidden;
+        .aboutType {
+            .aboutTitle {
+                text-align: left;
+                .titleBack {
+                    display: inline-block;
+                    width: 300px;
+                    height: 200px;
+                }
+                .number1 {
+                    background: url('../../assets/img/about/icon01.png') no-repeat;
+                }
+                .number2 {
+                    background: url('../../assets/img/about/icon02.png') no-repeat;
+                }
+                .number3 {
+                    background: url('../../assets/img/about/icon03.png') no-repeat;
+                }
+            }
+            .aboutContent {
+                width: 100%;
+                .aboutText {
+                    padding: 30px;
+                    color: #fff;
+                    font-size: 14px;
+                    text-indent: 28px;
+                    line-height: 24px;
+                    text-align: left;
+                }
+            }
+            .location {
+                .localtionContent p {
+                    // padding-left: 20px;
+                    text-align: left;
+                    margin-bottom: 0;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #666;
+                    .icon {
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: middle;
+                        margin-right: 24px;
+                    }
+                    .environment {
+                        background: url('../../assets/img/about/environment.png') no-repeat;
+                    }
+                    .phone {
+                        background: url('../../assets/img/about/phone.png') no-repeat;
+                    }
+                    .mail {
+                        background: url('../../assets/img/about/mail.png') no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

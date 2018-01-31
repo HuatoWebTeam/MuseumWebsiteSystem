@@ -1,0 +1,66 @@
+@import '../style/theme-color.less';
+
+.productContainer {
+    .topBack {
+        height: 460px;
+        background: url('../../assets/img/product/projects.png') center center no-repeat;
+    }
+    .contentConteiner {
+        text-align: center;
+        .mainContent {
+            width: 1100px;
+            padding: 40px;
+            margin: auto;
+            .productTitle {
+                margin-bottom: 50px;
+                .text {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .bottomBorder {
+                    display: inline-block;
+                    width: 40px;
+                    height: 20px;
+                    border-bottom: 4px solid @primary-color;
+                }
+            }
+            .content {
+                padding-bottom: 30px;
+                .modelContent {
+                    margin-bottom: 20px;
+                    color: #333;
+                    // padding-right: 50px;
+                    .imgContent {
+                        float: left;
+                        width: 140px;
+                        height: 140px;
+                    }
+                    .textContent {
+                        float: right;
+                        width: 320px;
+                        padding: 0 0px 0 20px;
+                        text-align: left;
+                        
+                        .title {
+                            font-size: 18px;
+                            padding-bottom: 8px;
+                            font-weight: 500;
+                            border-bottom: 1px solid #ddd;
+                        }
+                        .details {
+                            span{
+                                display: block;
+                                white-space: pre;
+                                height: 25px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                }
+                .modelContent:hover .textContent .title {
+                    color: #c82432;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import '../style/index.less';
+.main-container {
+    background: #fff;
+    min-width: @mainContentWidth + 10px;
+    .ant-layout-content {
+        position: relative;
+        .headerContain {
+            height: 80px;
+            position: absolute;
+            width: 100%;
+            top:0;
+            left: 0;
+            .hoverHeader {
+                height: 80px;
+                width:100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                .ant-layout-header {
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    right: 0;
+                    text-align: center;
+                    .headerMenuContent {
+                        width: @mainContentWidth;
+                        height: 100%;
+                        margin: 0 auto;
+                        .headerLogo {
+                            display: inline-block;
+                            float: left;
+                            width: 210px;
+                            height: 60px;
+                            vertical-align: bottom;
+                            color: #fff;
+                            padding-top: 15px;
+                            font-size: 15px;
+                            background: url('../../assets/img/LOGO.png') no-repeat;
+                            background-position-x: center;
+                        }
+                        .ant-menu {
+                            width: 430px;
+                            float: right;
+                            font-size: 18px;
+                            border-bottom: none;
+                        }
+                        .ant-menu-horizontal > .ant-menu-item {
+                            opacity: 0.6;
+                        }
+                        .ant-menu-horizontal > .ant-menu-item:hover {
+                            opacity: 1;
+                        }
+                        .ant-menu-horizontal > .ant-menu-item-selected {
+                            border-bottom: none;
+                            opacity: 1;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .ant-menu-horizontal > .ant-menu-item > a, .ant-menu-horizontal > .ant-menu-submenu > a {
+        color: #fff;
+    }
+    .ant-layout-footer {
+        height: 38px;
+        line-Height: 38px;
+        text-align: center;
+        font-size: 16px;
+        background: #19191b;
+        color: #777;
+        padding: 0;
+    }
+    
+}

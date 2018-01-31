@@ -1,0 +1,124 @@
+@import '../style/index.less';
+@import '../style/theme-color.less';
+@buttonColor: #c82432;
+// @floatLeft: ~`${document.body.clientWidth} / 2 - 30 + 'px'`;
+.homecontainer {
+    position: relative;
+    text-align: center;
+    .ant-carousel .slick-slide {
+        text-align: center;
+        height: @pageTitleImgHeight;
+        line-height: @pageTitleImgHeight;
+        overflow: hidden;
+    }
+    .businessContent {
+        text-align: center;
+        .homeContent {
+            width: @mainContentWidth;
+            margin-top: @pageTitleImgHeight;
+            margin: 0 auto;
+            padding: 60px 0;
+            overflow: hidden;
+            .bussinessContainer {
+                .ant-card-body {
+                    cursor: pointer;
+                    div {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .businessName {
+                            position: absolute;
+                            display: inline-block;
+                            width: 100%;
+                            height: 40px;
+                            line-height: 40px;
+                            bottom: 0;
+                            left: 0;
+                            color: #fff;
+                            background: rgba(0,0,0,.4);
+                        }
+                    }
+                }
+            }
+            .caseRadio {
+                padding: 0 62px 20px 62px;
+                .ant-radio-group {
+                    .ant-radio-button-wrapper{
+                        margin-left: 92px;
+                        border-radius: 4px;
+                    }
+                    .ant-radio-button-wrapper-checked {
+                        border-color: @primary-color;
+                        background: @primary-color;
+                        color: #fff;
+                        box-shadow: -1px 0 0 0 @primary-color;
+                    }
+                    .ant-radio-button-wrapper:first-child {
+                        margin-left: 0px;
+                    }
+                    .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused {
+                        color: @primary-color;
+                        // border-color: @primary-color; 
+                    }
+                    .ant-radio-button-wrapper-checked:hover {
+                        color: #fff;
+                    }
+                }
+                .museumCaseContent {
+                    margin-top: 70px;
+                    .museumCaseImg img {
+                        width: 420px;
+                        height: 315px;
+                    }
+                    .museumDetails {
+                        padding-right: 15px;
+                        .text {
+                            height: 193px;
+                            span {
+                                text-indent: 32px;
+                                text-align: left;
+                                padding-right: 5px;
+                            }
+                            
+                            // 
+                            // overflow: hidden;
+                            // text-overflow: ellipsis;
+                            // display: -webkit-box;
+                            // -webkit-box-orient: vertical;
+                            // -webkit-line-clamp: 4;
+                        }
+                        .caseButton {
+                            background: @primary-color;
+                            border-color: @primary-color;
+                            color: #fff;
+                            margin-top: 32px;
+                            margin-bottom: 46px;
+                        }
+                    }
+                }
+            }
+            .chooseMuseum {
+                .logoContent {
+                    width: 20%;
+                    display: inline-block;
+                    padding: 10px;
+                    height: 120px;
+                    div {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            .homeMap {
+                height: 980px;
+                background: url('../../assets/img/home/dt.png') no-repeat;
+                background-position-y: 20px;
+            }
+        }
+    }
+}

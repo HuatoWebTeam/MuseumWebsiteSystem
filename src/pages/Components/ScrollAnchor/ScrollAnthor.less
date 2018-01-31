@@ -1,0 +1,44 @@
+.myAnthor {
+    position: fixed;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    // padding-top: 15px;
+    margin: 0 auto;
+    left: 49%;
+    border-radius: 50%;
+    // background: rgba(0,0,0,.5);
+    overflow: hidden;
+    .hiddenAnchor {
+        position: absolute;
+        right: -60px;
+    }
+    .showAnchor {
+        background-color: rgba(255,255,255,0);
+        .ant-anchor-ink {
+            height: 0;
+            .ant-anchor-ink-ball.visible {
+                display: none;
+            }
+        }
+        .ant-anchor-link {
+            padding: 0;
+            .ant-anchor-link-title {
+                width: 60px;
+                height: 60px;
+                background: url('../../../assets/img/drop.png') no-repeat;
+                background-position: center center;
+                animation: myAnimation 0.6s infinite;
+                -webkit-animation: myAnimation 0.6s infinite;
+                -moz-animation: myAnimation 0.6s infinite;
+                -o-animation: myAnimation 0.6s infinite;
+            }
+        }
+        
+    }
+    @keyframes myAnimation {
+        from { background-position: center 10px; }
+        to { background-position: center 20px; }
+    }
+    
+}

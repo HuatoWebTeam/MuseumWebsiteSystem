@@ -1,0 +1,153 @@
+@import '../../style/index.less';
+@import '../../style/theme-color.less';
+// primary-color
+.businessDetailsContainer {
+
+    .titleBack {
+        height: 460px;
+
+    }
+    .scopeContent {
+        text-align: center;
+        .mainContent {
+            width: @mainContentWidth;
+            margin: 0 auto;
+            .productContainer {
+                .ant-radio-group {
+                    width: 100%;
+                    .ant-radio-button-wrapper {
+                        height: 50px;
+                        line-height: 50px;
+                        font-weight: 600;
+                    }
+                    .ant-radio-button-wrapper-checked {
+                        color: #fff;
+                        background: @primary-color;
+                    }
+                }
+                // .productName {
+                    
+                // }
+                .productTitle {
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    .text {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .bottomBorder{
+                        display: inline-block;
+                        width: 40px;
+                        height: 20px;
+                        border-bottom: 4px solid @primary-color;
+                    }
+                }
+                .content {
+                    padding-bottom: 27px;
+                    .introduce.ant-radio-group {
+                        padding: 15px 0;
+                        .ant-radio-button-wrapper {
+                            height: 30px;
+                            line-height: 30px;
+                            margin: auto;
+                            border-radius: 4px;
+                        }
+                        .ant-radio-button-wrapper + .ant-radio-button-wrapper {
+                            margin-left: 70px;
+                        }
+                    }
+                    .entry {
+                        height: 70px;
+                        margin: 10px 0 20px 0;
+                        .cont {
+                            height: 70px;
+                            line-height: 70px;
+                            font-size: 30px;
+                            border: 1px solid #666;
+                        }
+                        .text {
+                            padding: 0 30px;
+                            text-align: left;
+                            .title {
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            .detail {
+                                color: #666;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .texts {
+                        text-align: left;
+                        text-indent: 32px;
+                        line-height: 25px;
+                    }
+                    .detailsText {
+                        text-align: left;
+                    }
+                }
+                .equimentInfo {
+                    // background: #f3f3f3;
+                    padding: 30px 20px;
+                    border: 1px solid #747474;
+                    margin-bottom: 20px;
+                    .imgContent {
+                        position: relative;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 294px;
+                            height: 276px;
+                            margin: auto;
+                            border: 1px solid #a6a6a6;
+                        }
+
+                    }
+                    .textContent {
+                        text-align: left;
+                        padding: 37px 50px 0 15px;
+                        .textContentTitle {
+                            font-size: 18px;
+                            font-weight: 600;
+                            padding-bottom: 5px;
+                        }
+                        .textContentDetail {
+                            padding-bottom: 10px;
+
+                        }
+                        .specifications {
+                            margin-top: 60px;
+                            
+                            .spacifiText {
+                                // display: inline-block;
+                                padding-right: 30px;
+                                margin-bottom: 0;
+                                white-space:pre;
+                                height: 37px;
+                                line-height: 37px;
+                            }
+                        }
+                    }
+                }
+                .classicCase {
+                    .text {
+                        text-align: left;
+                        font-size: 16px;
+                        color: #666;
+                        text-indent: 32px;
+                    }
+                    .caseImg {
+                        img {
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
