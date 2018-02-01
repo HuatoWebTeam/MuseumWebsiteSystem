@@ -66,9 +66,9 @@ export const BusinessData = {
             },
             purification: {
                 title: [
+                    { type: 'environment', name: '展柜微环境净化调湿机'},
                     { type: 'constantHumi', name: '恒温恒湿调控系统' },
                     { type: 'temperatureHumi', name: '恒湿调控系统' },
-                    { type: 'environment', name: '展柜微环境净化调湿机'}
                 ],
                 content: {
                     constantHumi: {
@@ -76,10 +76,8 @@ export const BusinessData = {
                         name: '恒温恒湿调控系统',
                         text: ``,
                         specifications: [
-                            `环境温控范围：18℃~25℃ `,
-                            `温控灵敏度：≤±0.8℃ `,
-                            `环境湿度控制：45%~70%`,
-                            `湿控灵敏度：≤±4%`,
+                            `环境温控范围：18℃~25℃     温控灵敏度：≤±0.8℃ `,
+                            `环境湿度控制：45%~70%      湿控灵敏度：≤±4%`,
                             `过滤级别：板式初效/密褶式中效`,
                         ]
                     },
@@ -99,10 +97,8 @@ export const BusinessData = {
                         name: '展柜微环境净化调湿机',
                         text: ``,
                         specifications: [
-                            `调控容积：3~20m³`,
-                            `控湿精度：≤±2%`,
-                            `供电电源：AC220V/50Hz`,
-                            `额定功率：≤145W`,
+                            `调控容积：3~20m³                控湿精度：≤±2%`,
+                            `供电电源：AC220V/50Hz       额定功率：≤145W`,
                             `通讯方式： 预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块`,
                             `具备自动诊断和远程诊断功能，多重安全保护系统`
                         ]

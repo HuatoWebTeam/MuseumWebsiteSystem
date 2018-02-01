@@ -3,13 +3,20 @@ import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 const { SubMenu } = Menu;
 
-const readerMenuItem = ({key, title, icon, ...props}) => 
-    <Menu.Item key={key} {...props}>
+const readerMenuItem = ({ key, title, jump, icon, ...props }) => (
+  <Menu.Item key={key} {...props}>
+    {jump ? (
+      <a href={key} target='_blank' >
+        <span className="nav-text">{title}</span>
+      </a>
+    ) : (
       <Link to={key}>
         {icon && <Icon type={icon} />}
         <span className="nav-text">{title}</span>
       </Link>
-    </Menu.Item>;
+    )}
+  </Menu.Item>
+);
 
 
 const renderSubMenu = ({ key, title, icon, sub, ...props }) => 
