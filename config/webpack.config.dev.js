@@ -142,6 +142,9 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve("babel-loader"),
             options: {
+              plugins: [
+                ['import', [{ libraryName: 'antd', style: 'css'}]],
+              ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
@@ -184,7 +187,7 @@ module.exports = {
                 }
               },
               {
-                loader: require.resolve('less-loader')  // Compils Less to CSS
+                loader: require.resolve("less-loader") // Compils Less to CSS
               }
             ]
           },
@@ -218,6 +221,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: require("../src/lib/vendor-manifest.json")
+    }),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">

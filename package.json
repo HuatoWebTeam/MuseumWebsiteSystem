@@ -60,7 +60,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js && node scripts/deploy.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "dll": "webpack --config webpack.dll.config.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -105,7 +106,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.6.3",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "compression-webpack-plugin": "^1.1.6",
     "image-webpack-loader": "^3.4.2",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
