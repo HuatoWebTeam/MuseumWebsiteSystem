@@ -106,39 +106,57 @@ class ProductFeatures extends Component {
             </RadioGroup>
           </Col>
           <Col span={24} className="equimentInfo">
-            <Col span={this.state.productData.content[this.state.productButton].page ? 14 : 10} className="imgContent" style={{ height: "350px" }}>
+            <Col span={this.state.productData.content[this.state.productButton].page 
+              ? 14 : (this.state.productData.content[this.state.productButton].twoImg ? 12 : 10)} 
+              className="imgContent" style={{ height: "350px" }}>
               <img style={{ height: "276px", width: this.state.productData.content[this.state.productButton].page ? "560px" : "294px" }} src={this.state.productData.content[this.state.productButton].back} alt="back" />
             </Col>
-            <Col span={!this.state.productData.content[this.state.productButton].page ? 14 : 10} className="textContent">
-              <Col span={24} className="textContentTitle">
+            <Col span={!this.state.productData.content[this.state.productButton].page 
+              ? (this.state.productData.content[this.state.productButton].twoImg ? 12 : 14) : 10} 
+              className="textContent">
+            {
+              !this.state.productData.content[this.state.productButton].twoImg && <Col span={24} className="textContentTitle">
                 {this.state.productData.content[this.state.productButton].name}
               </Col>
-              <Col className="textContentDetail">
+            }
+              
+              {/* <Col className="textContentDetail">
                 {
                   this.state.productData.content[this.state.productButton]
                     .text
                 }
-              </Col>
-              <Col span={24} className="specifications">
-                <FreeScrollBar className="my-vertical-track" style={{ width: "100%", height: "150px" }}>
+              </Col> */}
+              <Col span={24} className="specifications" style={{
+                marginTop: this.state.productData.content[this.state.productButton].twoImg ? '0': '60px',
+                textAlign: this.state.productData.content[this.state.productButton].twoImg ? 'center' : 'left'
+              }} >
+              {
+                this.state.productData.content[this.state.productButton].twoImg 
+                ? <img 
+                    style={{ height: "276px", width: this.state.productData.content[this.state.productButton].page ? "560px" : "294px" }} 
+                    src={this.state.productData.content[this.state.productButton].rightBack} 
+                    alt='rightBack' />
+                : <FreeScrollBar className="my-vertical-track" style={{ width: "100%", height: "150px" }}>
                   {this.state.productData.content[this.state.productButton].specifications.map(
-                    (item, idx) => (
-                      <p
-                        key={idx}
-                        className="spacifiText"
-                        style={{
-                          whiteSpace: this.state.productData.content[
-                            this.state.productButton
-                          ].page
-                            ? "normal"
-                            : "pre"
-                        }}
-                      >
-                        {item}
-                      </p>
-                    )
-                  )}
+                      (item, idx) => (
+                        <p
+                          key={idx}
+                          className="spacifiText"
+                          style={{
+                            whiteSpace: this.state.productData.content[
+                              this.state.productButton
+                            ].page
+                              ? "normal"
+                              : "pre"
+                          }}
+                        >
+                          {item}
+                        </p>
+                      )
+                    )}
                 </FreeScrollBar>
+              }
+                
               </Col>
             </Col>
           </Col>
@@ -237,19 +255,20 @@ class ProductFeatures extends Component {
                 </Col>
                 <Col span={24} className="content">
                   <Col className="text">{data.virtualMuseum.text}</Col>
-                  <Col className="detailsText" style={{marginTop: '20px'}} >
-                    {data.virtualMuseum.details.map(
-                      (item, idx) => (
-                        <p key={idx} >{item}</p>
-                      )
-                    )}
+                  <Col className="detailsText" style={{ marginTop: "20px" }}>
+                    {data.virtualMuseum.details.map((item, idx) => (
+                      <p key={idx}>{item}</p>
+                    ))}
                   </Col>
-                  <Col span={24} className='img' style={{textAlign: 'left'}} >
-                    {
-                      data.virtualMuseum.img.map((item, idx) => (
-                        <img style={{margin: '20px 0'}} key={idx} src={item} alt={idx} />
-                      ))
-                    }
+                  <Col span={24} className="img" style={{ textAlign: "left" }}>
+                    {data.virtualMuseum.img.map((item, idx) => (
+                      <img
+                        style={{ margin: "20px 0" }}
+                        key={idx}
+                        src={item}
+                        alt={idx}
+                      />
+                    ))}
                   </Col>
                 </Col>
               </Col>

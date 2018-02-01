@@ -463,6 +463,8 @@ export const BusinessData = {
                         back: require('../../../assets/img/businessDetails/system03/custom-capsule2.jpg'),
                         name: '定制囊匣',
                         text: ``,
+                        twoImg: true,
+                        rightBack: require('../../../assets/img/businessDetails/system03/custom-capsule1.jpg') ,
                         specifications: [
                             `专为小型文物如钱币、宝玉石定制的囊匣外侧采用高强度的瓦楞纸板，`,
                             `内侧采用填充物加无酸纸隔板，保证文物安全的同时，还方便存放。`
@@ -637,7 +639,7 @@ export const BusinessData = {
                 ],
                 content: {
                     constantHumi: {
-                        back: require('../../../assets/img/businessDetails/system04/50.jpg'),
+                        back: require('../../../assets/img/businessDetails/system04/zhinengback.jpg'),
                         name: '智能展柜',
                         text: ``,
                         specifications: [
