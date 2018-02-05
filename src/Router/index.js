@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Home from '../pages/Home/Home';
-import Plan from '../pages/PlanIntroduce/Plan';
-import ClassicCase from '../pages/ClassicCase/ClassicCase';
-import About from '../pages/About/About';
-import BusinessScope from '../pages/Home/BusinessScope/Details';
-import RichText from '../pages/RichText/RichText';
-import Product from '../pages/productCenter/product';
+
+// 异步组件 。。 按需加载
+import asyncComponent from '../pages/Components/asyncComponent';
+
+
+const Home = asyncComponent(() => import('../pages/Home/Home'));
+const Plan = asyncComponent(() => import('../pages/PlanIntroduce/Plan'));
+const ClassicCase = asyncComponent(() => import('../pages/ClassicCase/ClassicCase'));
+const About = asyncComponent(() => import('../pages/About/About'));
+const BusinessScope = asyncComponent(() => import('../pages/Home/BusinessScope/Details'));
+const RichText = asyncComponent(() => import('../pages/RichText/RichText'));
+const Product = asyncComponent(() => import("../pages/productCenter/product"));
 
 /***
  * 开发人员注意：

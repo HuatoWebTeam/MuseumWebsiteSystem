@@ -6,11 +6,21 @@ export const BusinessData = {
     system01: {
         background: require('../../../assets/img/businessDetails/businessDetails.png'),
         name: [
+            { type: 'cabinetHumidifier', title: '展柜微环境净化调湿机' },
             { type: 'purification', title: '恒温恒湿调控系统' },
             { type: 'humidifier', title: '加湿除湿一体机'},
             { type: 'constant', title: '空气净化机' }
         ],
         technical: {  // 技术特点
+            cabinetHumidifier: [
+                { title: '控湿范围广', detail: `在展柜内湿度低于30℃条件下，有效湿度控制范围为20%~70%。`},
+                { title: '控湿精度高', detail: `调控精度≤±2%，且有良好的均匀性。`},
+                { title: '快速调湿', detail: `微正压输送的方式提高了调湿效率，有效降低了展柜内大气湿度达到目标值的速度。`},
+                { title: '无线通讯', detail: `内置2.4GHz无线通讯模块，能通过调控设备控制网关接入局域网，实现同监控服务器和客户端的实时通讯。`},
+                { title: '免排水和加水', detail: `将除湿的冷凝水自动挥发到空气中，无须人工排（倒）水；配有自动取水模组，在适用环境条件下，自动从将空气中水汽冷凝，补充恒湿机内液位。`},
+                { title: '小巧美观', detail: `设备体积小，功耗小，安装方便，可安装在各类展柜基座，仅需一定通风要求，可以安装在展柜的底部或顶部。`},
+                { title: '安全监测', detail: `安全性、稳定性、可靠性均通过机械工业仪器仪表综合技术经济研究所的检测。`}
+            ],
             humidifier: [
                 { count: 1, title: '智能控制', detail: `彩色触摸屏控制系统智能编程控制系统。` },
                 { count: 2, title: '环保节能', detail: `选用瑞典蒙特进口湿膜，对水质无特殊要求，无“白粉”污染文物表面，采用R410A新冷媒冷冻除湿技术，无污染、环保节能。`},
@@ -46,6 +56,78 @@ export const BusinessData = {
             
         },
         productIntroduction: {  // 产品介绍
+            cabinetHumidifier:{
+                title: [
+                    { type: 'HUM2003', name: 'HUM2003净化调湿机', isLang: true },
+                    { type: 'HUM2006', name: 'HUM2006净化调湿机', isLang: true },
+                    { type: 'HUM2012', name: 'HUM2012/2020净化调湿机', isLang: true },
+                    { type: 'HUM2050', name: '大型净化调湿机', isLang: true },
+                    { type: 'paishui', name: '自动供排水多联控制系统', isLang: true}
+                ],
+                content:{
+                    
+                    HUM2003: {
+                        back: require('../../../assets/img/businessDetails/system01/6.jpg'),
+                        name: 'HUM2003净化调湿机',
+                        text: ``,
+                        specifications: [
+                            `调控容积：3~20m³       控湿精度：≤±2%       尺寸：450*305*150mm     `,
+                            `控湿范围：在展柜内温度低于30℃条件下，有效湿度控制范围为20%~70%。`,
+                            `供电电源：AC220V/50Hz          额定功率： ≤145W`,
+                            `通讯性能：预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块。`,
+                            `具备自动诊断和远程诊断功能，多重安全保护系统。`
+                        ]
+                    },
+                    HUM2006: {
+                        back: require('../../../assets/img/businessDetails/system01/7.jpg'),
+                        name: 'HUM2006净化调湿机',
+                        text: ``,
+                        specifications: [
+                            `调控容积：≤6.0m³       控湿精度：≤±2%       尺寸：450*305*150mm     `,
+                            `控湿范围：在展柜内温度低于30℃条件下，有效湿度控制范围为20%~70%。`,
+                            `供电电源：AC220V/50Hz          额定功率： ≤145W`,
+                            `通讯性能：预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块。`,
+                            `具备自动诊断和远程诊断功能，多重安全保护系统。`
+                        ]
+                    },
+                    HUM2012: {
+                        back: require('../../../assets/img/businessDetails/system01/5.jpg'),
+                        name: 'HUM2012/HUM2020净化调湿机',
+                        text: ``,
+                        specifications: [
+                            `调控容积：≤12/20m³       控湿精度：≤±2%       尺寸：580*500*160mm     `,
+                            `控湿范围：在展柜内温度低于30℃条件下，有效湿度控制范围为20%~70%。`,
+                            `供电电源：AC220V/50Hz          额定功率： 210W~280W`,
+                            `通讯性能：预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块。`,
+                            `具备自动诊断和远程诊断功能，多重安全保护系统。`
+                        ]
+                    },
+                    HUM2050: {
+                        back: require('../../../assets/img/businessDetails/system01/1.jpg'),
+                        name: 'HUM2050/HUM2100大型净化调湿机',
+                        text: ``,
+                        specifications: [
+                            `调控容积：≤50/100m³       控湿精度：≤±2%            `,
+                            `控湿范围：在展柜内温度低于30℃条件下，有效湿度控制范围为20%~70%。`,
+                            `供电电源：AC220V/50Hz         额定功率： ≤750w~1150w`,
+                            `通讯性能：预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块。`,
+                            `具备自动诊断和远程诊断功能，多重安全保护系统。`
+                        ]
+                    },
+                    paishui: {
+                        back: require('../../../assets/img/businessDetails/system01/3.jpg'),
+                        name: '自动供排水多联控制系统',
+                        text: ``,
+                        specifications: [
+                            `水箱容积：根据实际需要，水箱大小2~5L，可多台联机扩容    `,
+                            `取水原理：内设自动取水装置，采用加热空气在瞬间冷却空气达到取水目的`,
+                            `水质报警：内置水质检测装置，水质不满足国标二级水质， 启动报警`,
+                            `液位检测：具备水位实时检测功能，装置能自动显示液位`,
+                            `安全设计：箱体间管路连接紧密， 杜绝漏水、溢水情况发生，同时具有漏水报警功能`
+                        ]
+                    },
+                }
+            },
             humidifier: {
                 title: [
                     { type: 'humidification', name: '加湿除湿一体机' },
@@ -56,7 +138,7 @@ export const BusinessData = {
                         name: '加湿除湿一体机',
                         text: ``,
                         specifications: [
-                            `除湿面积：25～350㎡       控制精度：±3%；       控制范围：30%-70%RH      `,
+                            `除湿面积：25～350㎡       控制精度：±3%       控制范围：30%-70%RH      `,
                             `控制系统：智能调控系统       控制方式：调控具备手动、自动两种类型可选`,
                             `工作电压：220V          排水方式：自动排水或内置水箱排水`,
                             `通讯性能：预留远程通讯端口RS485/RJ45，可实现远程监控功能`,
@@ -66,7 +148,6 @@ export const BusinessData = {
             },
             purification: {
                 title: [
-                    { type: 'environment', name: '展柜微环境净化调湿机'},
                     { type: 'constantHumi', name: '恒温恒湿调控系统' },
                     { type: 'temperatureHumi', name: '恒湿调控系统' },
                 ],
@@ -92,17 +173,7 @@ export const BusinessData = {
                             `控湿方式：一台设备控制多个文物库房`
                         ]
                     },
-                    environment: {
-                        back: require('../../../assets/img/businessDetails/system01/01.jpg'),
-                        name: '展柜微环境净化调湿机',
-                        text: ``,
-                        specifications: [
-                            `调控容积：3~20m³                控湿精度：≤±2%`,
-                            `供电电源：AC220V/50Hz       额定功率：≤145W`,
-                            `通讯方式： 预留通讯端口RS485/RJ45，内置2.4GHz无线通讯模块`,
-                            `具备自动诊断和远程诊断功能，多重安全保护系统`
-                        ]
-                    }
+                    
                 }
             },
             constant: {
@@ -135,17 +206,7 @@ export const BusinessData = {
                 }
             }
         },
-        classicCase: {    // 工程案例
-            text: [
-                `深圳市博物馆位于广东省深圳市福田区福中路市民中心A区，北靠莲花山公园，南临深南大道，是一座以地志性为主的综合类博物馆，是深圳文物收藏和历史研究中心。`,
-                `华图公司通过布置无线传感器监测网络、配置多种环境监测终端并结合多种离线监测设备为深圳博物馆建立全馆环境监测评估系统，同时提升展柜气密性、配置展柜电子恒湿机、灯光改造、改造恒温恒湿空调系统实现了对库房和专题展厅的文物保存环境调控。`
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system01/case1.jpg'),
-                require('../../../assets/img/businessDetails/system01/case2.jpg'),
-                require('../../../assets/img/businessDetails/system01/case3.jpg')
-            ]
-        } 
+        
     },
     system02: {
         background: require('../../../assets/img/businessDetails/system02/back.jpg'),
@@ -343,20 +404,7 @@ export const BusinessData = {
                 }
             }
         },
-        classicCase: {      // 工程案例
-            text: [
-                `广东海上丝绸之路博物馆实施主要目标为该建筑二层的珍品库房、标本库房、出水文物库房、本地文物库房及部分重点展柜提供了符合文物保存环境需求的恒温恒湿调控与微环境恒湿调控设备。满足了文物对保存环境相对湿度日波动值≤50.%、环境温度日较差≤2.0℃的要求。`,
-                `绵阳市博物馆设置240立方的文物储藏架，120立方双面架、20立方密集架、以及16台珍贵文物恒湿储藏柜。项目与2017年6月开始施工，进展顺利，供货和施工质量获得馆方高度评价。`
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system02/case1.jpg'),
-                require('../../../assets/img/businessDetails/system02/case3.jpg'),
-                require('../../../assets/img/businessDetails/system02/case2.jpg'),
-                require('../../../assets/img/businessDetails/system02/case4.jpg'),
-                require('../../../assets/img/businessDetails/system02/case5.jpg'),
-                require('../../../assets/img/businessDetails/system02/case6.jpg')
-            ]
-        }
+
     },
     system03: {
         background: require('../../../assets/img/businessDetails/system03/back.jpg'),
@@ -480,19 +528,7 @@ export const BusinessData = {
                 }
             },
             
-        },
-        classicCase: {  // 工程案例
-            text: [
-                `乌兰察布市博物馆成立于1992年，位于内蒙古自治区乌兰察布市格根西街，是乌兰察布市位移的地区级博物馆，负责全市的文物保护、考古发掘、藏品保管、展览宣传等相关业务工作。`,
-                `2016年8月起，华图公司负责承建该馆文物预防性保护项目，于2016年12月完成建设任务，其中包括700套囊匣供货。`,
-                `本项目囊匣数量大，供货时间紧，且大部分需要依据特定文物量身定做。为确保能按时完成任务，我公司第一时间成立专门的项目组，积极地同馆方就文物尺寸测量、样品确认等工作保持沟通。在3个月时间内，完成所有囊匣的供货，并顺利通过验收，获得了馆方好评。`
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system03/case1.jpg'),
-            ]
-        }
-
-        
+        },  
     },
     system04: {
         background: require('../../../assets/img/businessDetails/system04/back.jpg'),
@@ -651,16 +687,6 @@ export const BusinessData = {
             }
             
         },
-        classicCase: {  // 工程案例
-            text: [
-                ``,
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system04/53.jpg'),
-                require('../../../assets/img/businessDetails/system04/54.jpg'),
-                require('../../../assets/img/businessDetails/system04/55.jpg')
-            ]
-        }
 
         
     },
@@ -833,18 +859,7 @@ export const BusinessData = {
                 }
             }
         },
-        classicCase: {  // 工程案例
-            text: [
-                `安全登录：所有用户均需授权才能登录，需输入正确的账号与密码进行验证。`,
-                `系统主界面：主界面对环境监测数据分析、文物环境状态监测设备运行状态等信息进行汇总。`,
-                ``
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system05/userLogin.jpg'),
-                require('../../../assets/img/businessDetails/system05/main.jpg'),
-                require('../../../assets/img/businessDetails/system05/museum-app.jpg')
-            ]
-        }
+
     },
     system06: {
         background: require('../../../assets/img/businessDetails/system06/back.jpg'),
@@ -986,16 +1001,6 @@ export const BusinessData = {
             }
             
         },
-        classicCase: {  // 工程案例
-            text: [
-                ``,
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system06/59.jpg'),
-                require('../../../assets/img/businessDetails/system06/58.jpg'),
-                require('../../../assets/img/businessDetails/system06/57.jpg')
-            ]
-        }
 
         
     },
@@ -1142,17 +1147,6 @@ export const BusinessData = {
                 }
             },
         },
-        classicCase: {
-            text: [
-                `南越国宫署遗址位于广东省广州市越秀区中山四路。南越国宫署遗址内不仅有南越宫苑，还有从秦、汉、晋、南朝、隋、唐、南汉、宋、元、明、清到民国共12朝的遗迹遗物。`,
-                `随着广州城市规模和市区人口的不断增加，地面及地下交通流量不断增大，交通振动对周围环境的影响也越来越大。南越国宫署遗址紧邻广州地铁1号线和中山四路等交通干道，遗址多为砖、石、土结构，此种结构在环境振动的持续作用下，极易造成裂缝的产生和发育。在交通振动长年累月的持续作用下，遗址将出现疲劳破坏，从而缩短寿命。为解决这个问题，拟在南越国宫署遗址曲流石渠展示区（展示区内无WIFI覆盖）等关键遗址点安装振动威胁监测仪设备，采集遗址振动、水平位移、沉降数据，通过软件平台完成展示分析。`
-
-            ],
-            caseImg: [
-                require('../../../assets/img/businessDetails/system07/32.jpg'),
-                require('../../../assets/img/businessDetails/system07/33.jpg')
-            ]
-        } 
     },
     system08: {
         background: require('../../../assets/img/businessDetails/system08/back.jpg'),

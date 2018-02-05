@@ -13,6 +13,7 @@ const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const paths = require("./paths");
 const getClientEnvironment = require("./env");
 const CompressionPlugin = require('compression-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -72,6 +73,14 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, "/")
+  },
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+    'react-router-dom': 'ReactRouterDOM',
+    'echarts': 'echarts',
+    'classnames': 'classNames',
+    'core-js': 'core-js'
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -147,7 +156,7 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve("babel-loader"),
             options: {
-              plugins: [["import", [{ libraryName: "antd", style: "css" }]]],
+              plugins: [["import", [{ libraryName: "antd", style: true }]]],
               compact: true
             }
           },
@@ -204,7 +213,10 @@ module.exports = {
                       }
                     },
                     {
-                      loader: require.resolve("less-loader") // Compils Less to CSS
+                      loader: require.resolve("less-loader"), // Compils Less to CSS
+                      options: {
+                        modifyVars: { "primary-color": "#c82432" }
+                      }
                     }
                   ]
                 },
@@ -243,10 +255,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: require("../src/lib/vendor-manifest.json")
-    }),
+    // 打包文件分析
+
+    // new BundleAnalyzerPlugin(),
+
+    
+    // new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   manifest: require("../src/lib/vendor-manifest.json")
+    // }),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
@@ -284,7 +301,8 @@ module.exports = {
         // https://github.com/facebookincubator/create-react-app/issues/2376
         // Pending further investigation:
         // https://github.com/mishoo/UglifyJS2/issues/2011
-        comparisons: false
+        comparisons: false,
+        drop_console: true
       },
       mangle: {
         safari10: true

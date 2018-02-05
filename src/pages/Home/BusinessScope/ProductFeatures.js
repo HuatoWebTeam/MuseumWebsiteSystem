@@ -99,7 +99,9 @@ class ProductFeatures extends Component {
           <Col span={24} className="content ">
             <RadioGroup defaultValue={this.state.productButton} value={this.state.productButton} className="introduce" onChange={this.productButtonChange.bind(this)}>
               {this.state.productData.title.map((item, idx) => (
-                <RadioButton key={idx} value={item.type}>
+                <RadioButton className='myButton' style={{
+                  marginLeft: item.isLang && idx !== 0 ? '40px' : (idx === 0 ? 0 : '70px')
+                }} key={idx} value={item.type}>
                   {item.name}
                 </RadioButton>
               ))}

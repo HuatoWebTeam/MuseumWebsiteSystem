@@ -11,6 +11,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -66,6 +67,15 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")
+  },
+  externals: {
+    // 第三方库 不打包进主体文件，需要在index.html 中引入
+    'react': "React",
+    "react-dom": "ReactDOM",
+    "react-router-dom": "ReactRouterDOM",
+    'echarts': "echarts",
+    'classnames': "classNames",
+    'core-js': 'core-js'
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -143,7 +153,7 @@ module.exports = {
             loader: require.resolve("babel-loader"),
             options: {
               plugins: [
-                ['import', [{ libraryName: 'antd', style: 'css'}]],
+                ["import", [{ libraryName: "antd", style: true }]] // style: true 加载less, 'css'
               ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -187,7 +197,10 @@ module.exports = {
                 }
               },
               {
-                loader: require.resolve("less-loader") // Compils Less to CSS
+                loader: require.resolve("less-loader"), // Compils Less to CSS
+                options: {
+                  modifyVars: { "primary-color": "#c82432" }
+                }
               }
             ]
           },
@@ -221,9 +234,10 @@ module.exports = {
     ]
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require("../src/lib/vendor-manifest.json")
+      manifest: require("../src/assets/lib/vendor-manifest.json")
     }),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
