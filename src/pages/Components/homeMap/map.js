@@ -16,7 +16,7 @@ class HomeMap extends Component {
     });
   }
   componentDidMount() {
-    console.log(this.echart_react);
+    // console.log(this.echart_react);
     // this.echart_react.on('click', this.onEventHover)
     // this.echart_react.on('click', this.onEventHover)
   }
@@ -43,14 +43,14 @@ class HomeMap extends Component {
           return tooltip;
         },
         position: (point, params) => {
-          console.log(point, params);
+          // console.log(point, params);
           let top = 0;
           if(params.data.projects) {
             top = (16 * params.data.projects.length + 20) / 2;
           }
           point[0] = point[0] + 10;
           point[1] = point[1] - top;
-          console.log(point)
+          // console.log(point)
           return point;
         }
       },

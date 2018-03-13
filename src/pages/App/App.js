@@ -14,7 +14,7 @@ class App extends Component {
     scrollY: 0,
     headerShow: false,
     textOpacity: '.8',
-    backOpacity: 'rgba(0,0,0,.0)',
+    backOpacity: 'rgba(0,0,0,.7)',
     _isMounted: true
   };
   componentDidMount () {
@@ -65,10 +65,11 @@ class App extends Component {
     return <Layout className="main-container" style={{ minHeight: "100%" }}>
         <Content>
           <Affix className="headerContain">
-            <div className="hoverHeader" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeven}>
+            {/* onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeven} */}
+            <div className="hoverHeader">
               <Header ref="header" style={{ paddingTop: "15px", height: "80px", opacity: this.state.textOpacity, background: this.state.backOpacity }}>
                 <div className="headerMenuContent">
-                  <span className="headerLogo"></span>
+                  <span className="headerLogo" />
                   <MenuItem menus={menus} selectedKeys={[this.state.selectOpenKey]} onClick={this.menuClick} onOpenChange={this.openMenu} />
                 </div>
               </Header>
