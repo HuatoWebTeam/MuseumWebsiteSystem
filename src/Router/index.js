@@ -24,7 +24,7 @@ class Routes extends Component {
     render() {
         
            return <Switch>
-              <Route exact path="/Home" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/Plan" component={Plan} />
               <Route exact path="/Case" component={ClassicCase} />
               <Route exact path="/About" component={About} />

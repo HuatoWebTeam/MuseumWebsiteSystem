@@ -32,10 +32,10 @@ class App extends Component {
   // 
   setMenuOpenKey = props => {
     let { pathname } = props.location;
-    console.log(pathname === '/');
-    if ( pathname === '/') {
-      pathname = '/Home'
-    }
+    // console.log(pathname === '/');
+    // if ( pathname === '/') {
+    //   pathname = '/'
+    // }
     this.setState({ selectOpenKey: pathname });
     
     
