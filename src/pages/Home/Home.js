@@ -10,6 +10,7 @@ import './Home.less';
 
 
 const CarouselComponent = ({data}) => {
+  console.log(data);
   const items = data.map((item, idx) => (
     <div key={idx} 
       className='carouselContent' 
