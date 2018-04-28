@@ -11,12 +11,11 @@ import './Home.less';
 
 const CarouselComponent = ({data}) => {
   console.log(data);
-  const items = data.map((item, idx) => (
-    <div key={idx} 
+  const items = data.map((item) => (
+    <div key={item.id} 
       className='carouselContent' 
-      style={{background: 'url(' + item.url + ') no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
-      {/* <img src={item.url} alt={idx} /> */}
-      {/* <h3>{idx}</h3> */}
+    >
+      <img src={item.url} alt={item.id} style={{ width: '100%' }} />
     </div>
   ));
   return (<Carousel autoplay >{items }</Carousel>)

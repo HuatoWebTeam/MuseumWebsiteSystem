@@ -1,9 +1,9 @@
 
 // 轮播图
 export const carouselImg = [
-    { url: require("../../assets/img/home/01-img.jpg") }, 
-    { url: require("../../assets/img/home/02-img.jpg") }, 
-    { url: require("../../assets/img/home/03-img.jpg") }
+    { url: require("../../assets/img/home/01-img.jpg"), id: 1 }, 
+    { url: require("../../assets/img/home/02-img.jpg"), id: 2 }, 
+    { url: require("../../assets/img/home/03-img.jpg"), id: 3 }
   ];
 
 // 业务设备
